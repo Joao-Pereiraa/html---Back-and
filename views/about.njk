@@ -1,0 +1,34 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+<title>sobre - Desafio 2-2: HTML</title>
+
+{% endblock %}
+
+{% block content %}
+
+
+    <div id="cont">
+    <img src="{{about.avatar_img}}">    
+    <h1> {{about.name}} </h1>
+    </div>
+
+        </header>
+
+        <div id="cont"> 
+            <h2> {{about.description}} </h2>
+            <ul> {{about.description}}</ul>  
+            <li> {{about.description1}}</li>
+            <li> {{about.description2}}</li>
+            <li> {{about.description3}}</li>
+            <li> {{about.description4}}</li>
+            <li> {{about.description5}}</li>
+        </div>
+        <div id="links-redes" class="links"> 
+            {% for link in about.links %}
+            <a href="{{ link.url}}">{{link.name}}</a>
+            {% endfor %}
+       </div>
+
+  {% endblock %}
